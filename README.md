@@ -1,78 +1,21 @@
-# Deep-Emotion: Facial Expression Recognition Using Attentional Convolutional Network
+# SpeakTrum
+**BRIDGING COMMUNICATION GAPS!**
 
-This is a PyTorch implementation of research paper, [Deep-Emotion](https://arxiv.org/abs/1902.01019)
+> OVERVIEW
 
-[Note] This is not the official implementation of the paper
+Speaktrum is an innovative project that seeks to empower autistic individuals by enhancing their communication abilities during video calls, particularly on platforms. Through the utilization of a face detection program, Speaktrum intelligently identifies and interprets user emotions in real-time, providing personalized guidance to bridge communication gaps. Video calls can often be overwhelming and anxiety-inducing for individuals on the autism spectrum, but Speaktrum addresses this challenge by detecting signs of stress or fear and acting as a supportive companion. The system offers personalized prompts and suggestions to help users stay calm and navigate challenging moments, ensuring a more comfortable communication experience. With Speaktrum as their guiding force, individuals receive tailored and empathetic guidance based on their unique emotional needs, including reminders to take deep breaths, soothing techniques, and suggestions for brief breaks. Our mission is to create an inclusive and accessible virtual environment where autistic individuals can communicate effectively and confidently. Speaktrum serves as a bridge, minimizing communication gaps during video calls and facilitating meaningful connections for those with autism spectrum disorder. Through this innovative system, we aim to empower individuals to discover their voice, express themselves with confidence, and embrace the spectrum of their abilities
 
-## Architecture
-* An end-to-end deep learning framework, based on attentional convolutional network
-* Attention mechanism is added through spatial transformer network
+> IDEA & TEAM
 
+![alt text](https://i.ibb.co/1LJyvjz/Screenshot-2023-08-16-213612.png/to/img.png)
+![alt text](https://i.ibb.co/HNh9J0w/Screenshot-2023-08-16-213517.png/to/img.png)
+![alt text](https://i.ibb.co/34Tyw2f/Screenshot-2023-08-16-213537.png/to/img.png)
 
-<p align="center">
-  <img src="imgs/net_arch.PNG" width="960" title="Deep-Emotion Architecture">
-</p>
-
-
-## Datasets
-* [FER2013](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
-* [CK+](https://ieeexplore.ieee.org/document/5543262)
-* [JAFFE](https://www.researchgate.net/publication/220013358_The_japanese_female_facial_expression_jaffe_database)
-* [FERG](https://homes.cs.washington.edu/~deepalia/papers/deepExpr_accv2016.pdf)
-
-## Prerequisites
-To run this code, you need to have the following libraries:
-* pytorch >= 1.1.0
-* torchvision ==0.5.0
-* opencv
-* tqdm
-* PIL
-
-## Structure of this repository
-This repository is organized as :
-* [main](/main.py) This file contains setup of the dataset and training loop.
-* [visualize](/visualize.py) This file contains the source code for evaluating the model on test data and real-time testing on webcam.
-* [deep_emotion](/deep_emotion.py) This file contains the model class
-* [data_loaders](/data_loaders.py) This file contains the dataset class
-* [generate_data](/generate_data.py) This file contains the setup of the [dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data)
-
-## Usage
-Cool [video](https://www.youtube.com/watch?v=yN7qfBhfGqs) created by [DeepLearning_by_PhDScholar](https://www.youtube.com/channel/UCUv49cJ3xwr1NXxl9qIJ7kA/about) for how to use this implementation.
-### Data preparation
-Download the dataset from [Kaggle](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/data), and decompress ```train.csv``` and ```test.csv``` into ```./data``` folder.
-
-### How to run
-**Setup the dataset**
-```
-python main.py [-s [True]] [-d [data_path]]
-
---setup                 Setup the dataset for the first time
---data                  Data folder that contains data files
-```
-
-**To train the model**
-```
-python main.py  [-t] [--data [data_path]] [--hparams [hyperparams]]
-                                [--epochs] [--learning_rate] [--batch_size]
-
---data                  Data folder that contains training and validation files
---train                 True when training
---hparams               True when changing the hyperparameters
---epochs                Number of epochs
---learning_rate         Learning rate value
---batch_size            Training/validation batch size
-```
-
-**To validate the model**
-```
-python visualize.py [-t] [-c] [--data [data_path]] [--model [model_path]]
-
---data                  Data folder that contains test images and test CSV file
---model                 Path to pretrained model
---test_cc               Calculate the test accuracy
---cam                   Test the model in real-time with webcam connect via USB
-```
-## Prediction Samples
-<p align="center">
-  <img src="imgs/samples.png" width="720" title="Deep-Emotion Architecture">
-</p>
+> REFERENCES
+- [1] Baron-Cohen, S., Scott, F. J., Allison, C., Williams, J., Bolton,
+P., & Matthews, F. E. (2009). Prevalence of autism-spectrum
+conditions: UK school-based population study. The British
+Journal of Psychiatry, 194(6), 500-509.
+- [2] Minaee, S., & Abdolrashidi, A. (2019). Deep-Emotion: Facial
+Expression Recognition Using Attentional Convolutional
+Network. arXiv:1902.01019.
